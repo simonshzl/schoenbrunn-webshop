@@ -1,0 +1,202 @@
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#f7f2ee;
+  color:#2a1b1b;
+  font-family:Inter, sans-serif;
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+}
+
+:root{
+  --bordeaux:#6d1f2b;
+  --gold:#c9a24d;
+}
+
+button{
+  background:var(--bordeaux);
+  color:white;
+  border:none;
+  padding:12px 20px;
+  cursor:pointer;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px;
+}
+
+.card{
+  background:white;
+  border-radius:14px;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+input,select{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+}
+
+/* Header Basis */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(247,242,238,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--gold);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Logo */
+.logo{
+  font-family:'Playfair Display', serif;
+  font-size:1.4rem;
+  font-weight:600;
+  color:var(--bordeaux);
+  text-decoration:none;
+}
+
+/* Navigation */
+.nav-left, .nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-link{
+  font-family:Inter, sans-serif;
+  font-size:0.95rem;
+  color:#2a1b1b;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  height:36px;
+  line-height:36px;
+  padding:0 8px;
+  transition:color 0.3s ease;
+}
+
+.nav-link:hover{
+  color:var(--bordeaux);
+}
+
+.nav-login{
+  height:36px;
+  line-height:36px;
+  padding:0 16px;
+  border-radius:8px;
+  background:var(--bordeaux);
+  color:white;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  transition:background 0.3s ease;
+}
+
+.nav-login:hover{
+  background:#581823;
+}
+
+.nav-login::after{
+  display:none;
+}
+
+/* Auth Pages */
+.auth-wrapper{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f7f2ee;
+}
+
+.auth-card{
+  width:100%;
+  max-width:420px;
+  background:white;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.1);
+}
+
+.auth-card h2{
+  margin-bottom:20px;
+  color:var(--bordeaux);
+}
+
+.auth-card label{
+  display:block;
+  margin-bottom:14px;
+  font-size:0.9rem;
+}
+
+.auth-card input{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+}
+
+.auth-card button{
+  width:100%;
+  margin-top:16px;
+}
+
+.auth-links{
+  margin-top:16px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.auth-links a{
+  font-size:0.85rem;
+  color:var(--bordeaux);
+  text-decoration:none;
+}
+
+/* Fahrt-Auswahl Card */
+.fahrt-card{
+  display:block;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+  border:2px solid transparent;
+  text-decoration:none;
+  color:#2a1b1b;
+  transition: all 0.3s ease;
+}
+
+.fahrt-card:hover{
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.fahrt-card.selected{
+  border:2px solid var(--bordeaux);
+}
+
+.card-content{
+  padding:24px;
+}
